@@ -4,6 +4,10 @@
 
 通过修改剪贴板中图片的像素点，以达到修改剪贴板图片哈希值的目的
 
+## 下载
+
+https://github.com/LanluZ/Pix-Random-Change/releases/tag/1.0
+
 ## 使用
 
 1. 复制图片到剪贴板
