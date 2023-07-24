@@ -10,7 +10,7 @@
 
 ## 下载
 
-https://github.com/LanluZ/Pix-Random-Change/releases/tag/1.0
+https://github.com/LanluZ/Pix-Random-Change/releases/tag/1.1
 
 ## 使用
 
