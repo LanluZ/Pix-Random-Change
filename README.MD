@@ -2,7 +2,7 @@
 
 ## 联动项目
 
-[]()
+[Img-Resize](https://github.com/LanluZ/Img-Resize):缩小剪贴板内过大的图片，使图像缩小到需要的范围
 
 ## 说明
 
