@@ -20,6 +20,7 @@ def main():
 
         # 写入图片到剪贴板
         ImgTextClipboard.pasteImgToClipboard(img)
+        print(0)
     except cv2.error:
         print('ERR:1,请复制正确图片信息')
 
