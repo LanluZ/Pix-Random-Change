@@ -7,19 +7,21 @@ from PIL import Image
 
 
 def main():
-    # 读入剪贴板图片
-    img = ImgTextClipboard.copyImgFormClipboard()
+    try:
+        img = ImgTextClipboard.copyImgFormClipboard()
 
-    # Image转cv2
-    img = cv2.cvtColor(np.array(img), cv2.COLOR_RGB2BGR)
+        # Image转cv2
+        img = cv2.cvtColor(np.array(img), cv2.COLOR_RGB2BGR)
 
-    img[0, 0, 0] = random.randint(0, 0xffffff)
+        img[0, 0, 0] = random.randint(0, 0xffffff)
 
-    # cv2转Image
-    img = Image.fromarray(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+        # cv2转Image
+        img = Image.fromarray(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
 
-    # 写入图片到剪贴板
-    ImgTextClipboard.pasteImgToClipboard(img)
+        # 写入图片到剪贴板
+        ImgTextClipboard.pasteImgToClipboard(img)
+    except cv2.error:
+        print('ERR:1,请复制正确图片信息')
 
 
 if __name__ == '__main__':
