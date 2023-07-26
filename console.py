@@ -3,6 +3,7 @@ import os.path
 import platform
 import random
 import sys
+import warnings
 
 
 def main(args):
@@ -11,13 +12,14 @@ def main(args):
     print(abs_img_path)
 
     try:
+        warnings.filterwarnings("ignore", category=Warning)
         # 读入 修改 写出
         img = cv2.imread(abs_img_path)
         img[0, 0, 0] = random.randint(0, 0xffffff)
         cv2.imwrite(abs_img_path, img)
         print(0)
-    except cv2.error:
-        print('ERR:1,请输入完整正确图片路径')
+    except TypeError:
+        print('ERR:1,请输入完整正确图片路径且路径名不能有中文')
 
 
 # 绝对路径判断
@@ -37,6 +39,12 @@ def isAbsPath(path):
 # 绝对路径修正
 def AbsPathFix(path):
     if not isAbsPath(path):
+        # 去除相对路径标识符
+        if path[:2] == './' or path[:2] == '.\\':
+            path = path[2:]
+        elif path[:1] == '/' or path[:1] == '\\':
+            path = path[1:]
+
         path = os.path.join(os.getcwd(), path)
     return path
 
