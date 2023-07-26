@@ -2,12 +2,14 @@ import cv2
 import random
 import ImgTextClipboard
 import numpy as np
+import warnings
 
 from PIL import Image
 
 
 def main():
     try:
+        warnings.filterwarnings("ignore", category=Warning)
         img = ImgTextClipboard.copyImgFormClipboard()
 
         # Image转cv2
