@@ -8,9 +8,16 @@
 
 通过修改剪贴板中图片的像素点，以达到修改剪贴板图片哈希值的目的
 
+或者输入一个图像路径，以修改图像
+
+## 版本
+
+1. main.py 处理剪贴板图像
+2. console.py 处理图像文件，接受一个图像路径参数
+
 ## 下载
 
-https://github.com/LanluZ/Pix-Random-Change/releases/tag/1.1
+https://github.com/LanluZ/Pix-Random-Change/releases/tag/1.2
 
 ## 使用
 
