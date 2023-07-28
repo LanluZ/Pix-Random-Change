@@ -14,6 +14,7 @@
 
 1. main.py 处理剪贴板图像
 2. console.py 处理图像文件，接受一个图像路径参数
+3. module.py 模块版 输入一张Image图像 返回修改后的Image图像
 
 ## 下载
 
