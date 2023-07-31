@@ -1,5 +1,6 @@
 import cv2
 import random
+import warnings
 import numpy as np
 from PIL import Image
 
@@ -15,6 +16,8 @@ def pixRandomChange(img):
 
 def pixRandomChangeFile(path):
     # 注意：cv2.imread()不支持路径中文
+    warnings.filterwarnings("ignore", category=Warning)
     img = cv2.imread(path)
     img[0, 0, 0] = random.randint(0, 0xfffffff)
     cv2.imwrite(path, img)
+    print('finish')
